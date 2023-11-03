@@ -1,0 +1,58 @@
+'''
+    usd_amount = 1000 
+    eur_amount = usd_amount * exchange_rate
+''' // variables with superfluous names
+'''
+def scrape_news_headlines(url):
+    """
+    This function takes a URL as input and scrapes the headlines from the news website.
+    """Excessive function callsT request to the URL
+    response = requests.get(url)
+    
+    # Substep 2.2: Extract the HTML content from the response
+    html_content = response.text
+    
+    # Substep 2.3: Create a BeautifulSoup object to parse the HTML content
+    soup = BeautifulSoup(html_content, 'html.parser')
+    Excessive function calls
+    # Substep 2.4: Find all the headline elements in the HTML
+    headlines = soup.find_all('h2')
+    
+    # Substep 2.5: Extract the text fro// 
+    
+    # Substep 2.6: Return the list of news headlines
+    return headlines_text
+''' // rebundant and extraneous steps
+'''
+# Step 4: Define the URL of the news website
+url = 'https://www.example-news-website.com'
+''' // detailed and redundant explanations of thought process at each tortuous step.
+'''
+x = 5
+y = 10
+if x == 5:
+    y = y * 2
+else:
+    y = y * 2
+''' // Redundant and nonsensical statements
+'''
+numbers = [1, 2, 3, 4, 5]
+for i in range(len(numbers)):
+    number = numbers[i]
+    print("The number is:", number)
+''' // Unnecessary loops
+'''
+def add(a, b):
+    return a + b
+
+result = add(3, 4)
+result2 = add(add(1, 2), add(3, 4))
+''' // Excessive function calls
+'''
+def complex_calculation(a, b):
+    result = 0
+    for i in range(a):
+        for j in range(b):
+            result += i * j
+    return result
+''' // complex code

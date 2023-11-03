@@ -1,0 +1,103 @@
+Code redundancy includes the following types followed by some detailed examples:
+    Type 1: Verbose comments for Non-essential code. 
+    Example 1:
+    '''
+    # Step 1: Importing necessary libraries
+    import requestsThe code contains a vast number of verbose comments.  
+    import re
+    import nltk
+    from nltk.sentiment import SentimentIntensityAnalyzer
+    from bs4 import BeautifulSoup
+    '''
+    In example 1, the comment on importing python libraries is rebundant as importing libraries is common in the python code.
+    Example 2:
+    '''
+    # Step 1: Define a list of numbers
+    numbers = [1, 2, 3, 4, 5]
+    '''
+    In example 2, the comment is rebundant as the code for defining the list is not crucial.
+    Example 3:
+    '''
+    # Substep 2.6: Return the list of news headlines
+        return headlines_text
+    '''
+    In example 3, the comment is rebundant as the return statement in the code is very straightforward.
+    Example 4:
+    '''
+    # Substep 2.1: Send a GET request to the URL
+        response = requests.get(url)
+    '''
+    In example 4, the comment is rebundant as the code statement is very straightforward.
+    Type 2: Superfluous names of variables in the solution.
+    Example 5:
+    '''
+        first_number = 10
+        second_number = 5
+    ''' 
+    In example 5, the variable names are rebundant as "first_number" and "second_number" can be shorten to shorter names.
+    Type 3: Redundant and nonsensical statements.
+    Example 6:
+    '''
+    x = 5
+    y = 10
+    if x == 5:
+        y = y * 2
+    else:
+        y = y * 2
+    ''' 
+    In example 6, the if statement is rebundant as both branches have the same effect.
+    Type 4: Unnecessary loops.
+    Example 7:
+    '''
+    numbers = [1, 2, 3, 4, 5]
+    for i in range(len(numbers)):
+        number = numbers[i]
+        print("The number is:", number)
+    ''' 
+    In example 7,the loop statement is rebundant as there is no need  to conduct an unnecessarily complicated way to iterate through a list in Python.
+    
+Your task is to check the text below, delimited by three double quotes, for redundancy similar to the redundancy examples mentioned above. If redundancy exists, please answer in the following format:
+    type x: ...its correspond text... 
+If it doesn't exist, please inform me that there is no redundancy. 
+
+
+"""
+
+# filename: exorbitantly_complex_script_to_calculate_currency_conversion.py
+
+# Step 1: Start by gathering the latest exchange rate between USD and EUR
+# To ensure accuracy, we will repeatedly conduct web searches until we find a reliable source
+import requests
+
+exchange_rate_found = False
+while not exchange_rate_found:
+    search_query = "current exchange rate USD EUR"
+    response = requests.get(f"http://www.google.com/search?q={search_query}")
+
+    # Let's check if our search was successful
+    if response.status_code == 200:
+        # Great! We have obtained the search results page
+        search_results = response.text
+
+        # Now, we need to locate the exchange rate within the search results
+        exchange_rate_start_index = search_results.find("1 USD = ")
+        exchange_rate_end_index = search_results.find(" EUR")
+        
+        # If the exchange rate is found within the search results, we can extract it
+        if exchange_rate_start_index != -1 and exchange_rate_end_index != -1:
+            exchange_rate_text = search_results[exchange_rate_start_index + len("1 USD = "):exchange_rate_end_index]
+            exchange_rate = float(exchange_rate_text)
+
+            exchange_rate_found = True
+
+# Step 2: Calculate the equivalent amount of 1000 USD in EUR
+usd_amount = 1000
+eur_amount = usd_amount * exchange_rate
+
+# Step 3: Display the result to the user
+print(f"The equivalent amount of {usd_amount} USD in EUR is {eur_amount} EUR.")
+
+# TERMINATE
+
+"""
+
